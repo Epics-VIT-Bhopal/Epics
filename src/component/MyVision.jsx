@@ -8,10 +8,10 @@ const MyVision = () => {
   useEffect(() => {
     let stream = null;
 
-    // Immediately try to start camera on component mount
+    // Immediately try to start camera on component
     const enableCamera = async () => {
       try {
-        // Request camera access immediately
+        // Request camera access
         stream = await navigator.mediaDevices.getUserMedia({
           video: {
             facingMode: 'environment',
@@ -48,7 +48,6 @@ const MyVision = () => {
   return (
     <div className="min-h-screen bg-slate-600 p-4 flex items-center justify-center">
       <div className="w-full max-w-4xl bg-slate-600 rounded-lg overflow-hidden">
-        {/* Header */}
         <div className="flex items-center px-4 py-2">
           <div className="w-6 h-6">
             <svg viewBox="0 0 24 24" className="w-full h-full text-white fill-current">
